@@ -26,7 +26,13 @@ def find_greater_pair(src)
   row_index = 0
   element_index = 0
   while row_index < src.count  do
-    row_index += 1
+    if src[row_index][0] > src[row_index][1]
+      greatest << src[row_index][0]
+      row_index += 1 
+    else
+      greatest << src[row_index][1]
+      row_index += 1
+    end 
   end
   
   greatest
